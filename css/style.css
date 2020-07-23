@@ -1,0 +1,144 @@
+/*
+@mixin heading-shadow(
+  $colour: lightness-shift($colour-primary),
+  $offset: $heading-shadow-size
+) {
+  text-shadow: $offset $offset $colour;
+}
+
+@mixin border($colour: $colour-primary) {
+  border: 0.1rem solid $colour;
+}
+
+@mixin img-ratio {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  & img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin btn {
+  padding: $grid-gutter;
+  @include border;
+  color: $colour-primary;
+  background: $colour-secondary;
+  cursor: pointer;
+  &:hover {
+    background: $colour-primary;
+    color: $colour-accent;
+  }
+  &--full-width {
+    width: 100%;
+    margin: 0 auto;
+  }
+}*/
+html {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  background: #15DEA5;
+  color: yellow;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1500px;
+  width: 80%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  background: #15DEA5;
+  color: yellow;
+}
+
+.container {
+  background: lightblue;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+}
+
+.menugauche {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: red;
+}
+
+.menudroite {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: red;
+}
+
+.menu1 {
+  height: 30em;
+  width: 25em;
+  background: grey;
+}
+
+.menu2 {
+  height: 30em;
+  width: 25em;
+  background: grey;
+}
+
+.menu3 {
+  height: 30em;
+  width: 25em;
+  background: grey;
+}
+
+.menu4 {
+  height: 30em;
+  width: 25em;
+  background: grey;
+}
+
+.container1 {
+  background: purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 8%;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: pink;
+  width: 30%;
+  height: 50%;
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=style.css.map */
