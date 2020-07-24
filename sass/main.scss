@@ -3,14 +3,14 @@
 
 @mixin fondbody {
   height: 100%;
-  width: 80%;
+  width: 1100px;
 }
 @mixin fondheader {
   background: $colour-primary;
   color: yellow;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3em;
-  height: 100px;
+  height: 120px;
   width: 100%;
 }
 @mixin fondmenu1234 {
@@ -28,6 +28,17 @@
   align-items: center;
   align-content: space-evenly;
 }
+@mixin pagemenu {
+  background: orange;
+  height: 85%;
+  width: 80%;
+}
+@mixin pagemenutitre {
+  background: red;
+  height: 6%;
+  width: 80%;
+  margin-top: -1.5em;
+}
 html {
   display: flex;
   justify-content: center;
@@ -41,18 +52,27 @@ header {
 }
 body {
   @include fondbody;
+  margin: 0;
+  padding: 0;
 }
 footer {
   display: flex;
   justify-content: space-between;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
   align-items: center;
-  height: 100px;
+  height: 85px;
   background: $colour-primary;
   color: yellow;
   font-size: 2.5em;
+  position: fixed;
+  bottom: 0;
+  width: 1060px;
 }
+.margefooter {
+  height: 85px;
+}
+
 .container {
   background: lightblue;
   display: flex;
@@ -61,6 +81,9 @@ footer {
   align-items: center;
   height: 1400px;
 }
+
+/*page acceuil*/
+
 .menu {
   @include fondmenu;
 }
@@ -87,4 +110,14 @@ footer {
   border-radius: 0.4em;
   font-size: 2.7em;
   color: yellow;
+}
+
+/*page note*/
+
+.menutitre {
+  @include pagemenutitre;
+}
+
+.menunote {
+  @include pagemenu;
 }
