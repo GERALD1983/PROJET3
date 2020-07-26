@@ -15,6 +15,20 @@
     transform: rotate(-8deg);
   }
 }
+@keyframes animation-point {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 @mixin fondbody {
   height: 100%;
@@ -128,6 +142,11 @@ footer {
 .menu1 {
   @include fondmenu1234;
 }
+.note {
+  background: linear-gradient(to left, red, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .menu2 {
   @include fondmenu1234;
 }
@@ -160,6 +179,10 @@ footer {
   border-radius: 0.4em;
   font-size: 2.7em;
   color: yellow;
+}
+.petitpoint {
+  margin-left: 0.3em;
+  animation: animation-point 1s ease-in-out alternate forwards infinite;
 }
 
 /*page note*/
