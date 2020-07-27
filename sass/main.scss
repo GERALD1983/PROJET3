@@ -1,6 +1,9 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
+$colour-primary: #579c87;
+$colour-secondary: #fdcb46;
+
 @keyframes animation-btnfooter {
   0% {
     transform: rotate(0deg);
@@ -30,13 +33,17 @@
   }
 }
 
+@mixin degradewebkit {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @mixin fondbody {
   height: 100%;
   width: 80%;
 }
 @mixin fondheader {
   background: $colour-primary;
-  color: yellow;
+  color: $colour-secondary;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3em;
   height: 120px;
@@ -98,7 +105,7 @@ a {
 }
 header a,
 footer a {
-  color: yellow;
+  color: $colour-secondary;
 }
 footer {
   display: flex;
@@ -108,7 +115,7 @@ footer {
   align-items: center;
   height: 85px;
   background: $colour-primary;
-  color: yellow;
+  color: $colour-secondary;
   font-size: 2.5em;
   position: fixed;
   bottom: 0;
@@ -141,20 +148,31 @@ footer {
 }
 .menu1 {
   @include fondmenu1234;
+  background: #fcdfdb;
 }
-.note {
-  background: linear-gradient(to left, red, yellow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.M1 {
+  color: #3c1218;
 }
 .menu2 {
   @include fondmenu1234;
+  background: #fff5fe;
+}
+.M2 {
+  color: #c77412;
 }
 .menu3 {
   @include fondmenu1234;
+  background: #f9f9f9;
+}
+.M3 {
+  color: #0887fb;
 }
 .menu4 {
   @include fondmenu1234;
+  background: #fdfffd;
+}
+.M4 {
+  color: #72bf56;
 }
 .titremenu {
   &--T {
@@ -168,6 +186,23 @@ footer {
     transform: scale(1.3);
   }
 }
+.note {
+  &--1 {
+    color: #3c1218;
+  }
+  &--2 {
+    background: linear-gradient(to right, #c77412, #905bfd);
+    @include degradewebkit;
+  }
+  &--3 {
+    background: linear-gradient(to right, #0431df, #0887fb);
+    @include degradewebkit;
+  }
+  &--4 {
+    background: linear-gradient(to right, #3d9339, #bfff7e);
+    @include degradewebkit;
+  }
+}
 
 .btn {
   display: flex;
@@ -178,7 +213,7 @@ footer {
   height: 2em;
   border-radius: 0.4em;
   font-size: 2.7em;
-  color: yellow;
+  color: $colour-secondary;
 }
 .petitpoint {
   margin-left: 0.3em;
