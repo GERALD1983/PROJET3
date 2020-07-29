@@ -50,6 +50,7 @@ $colour-secondary: #fdcb46;
   width: 100%;
 }
 @mixin fondmenu1234 {
+  box-shadow: 4px 2px 5px 4px #ededed;
   height: 32em;
   width: 24em;
   background: grey;
@@ -59,7 +60,7 @@ $colour-secondary: #fdcb46;
   align-items: center;
 }
 @mixin fondmenu {
-  background: purple;
+  background: white;
   height: 100%;
   width: 95%;
   display: flex;
@@ -73,7 +74,16 @@ $colour-secondary: #fdcb46;
   display: flex;
   justify-content: center;
 }
+@mixin titrecontenumenu {
+  font-size: 1.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @mixin pagemenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   background: orange;
   height: 85%;
   width: 80%;
@@ -83,6 +93,9 @@ $colour-secondary: #fdcb46;
   height: 6%;
   width: 80%;
   margin-top: -1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 html {
   display: flex;
@@ -97,6 +110,7 @@ header {
 }
 body {
   @include fondbody;
+  border: 1px solid black;
   margin: 0;
   padding: 0;
 }
@@ -126,7 +140,7 @@ footer {
 }
 
 .container {
-  background: lightblue;
+  background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,9 +188,25 @@ footer {
 .M4 {
   color: #72bf56;
 }
+i {
+  background: linear-gradient(to right, #f04a5e, #f78f6a);
+  @include degradewebkit;
+  font-size: 1.5em;
+}
 .titremenu {
+  &--icon {
+    @include titremenu;
+  }
+  &--contenumenu {
+    @include titrecontenumenu;
+    flex-direction: column;
+  }
+  &--contenumenu2 {
+    @include titrecontenumenu;
+  }
   &--T {
     @include titremenu;
+    margin-top: 0.5em;
     margin-bottom: 1em;
   }
   &--T_M {
@@ -184,6 +214,8 @@ footer {
   }
   &:hover {
     transform: scale(1.3);
+    opacity: 0.6;
+    transition: 0.5s ease-in-out;
   }
 }
 .note {
@@ -220,7 +252,14 @@ footer {
   animation: animation-point 1s ease-in-out alternate forwards infinite;
 }
 
-/*page note*/
+/*page des menus*/
+.noteimghaut {
+  font-size: 2em;
+  padding-bottom: 0.3em;
+}
+.noteimgbas {
+  padding-right: 0.3em;
+}
 
 .menutitre {
   @include pagemenutitre;
@@ -228,4 +267,27 @@ footer {
 
 .menunote {
   @include pagemenu;
+  &--1 {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.menuP {
+  display: flex;
+  justify-content: space-around;
+  &--plat {
+    background: white;
+    display: flex;
+    flex-direction: column;
+  }
+  &--prix {
+    background: white;
+    display: flex;
+    flex-direction: column;
+  }
+}
+img {
+  background: white;
+  width: 17em;
+  height: 3em;
 }
