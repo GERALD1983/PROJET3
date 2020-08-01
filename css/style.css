@@ -252,11 +252,30 @@ i {
 /*page des menus*/
 .noteimghaut {
   font-size: 2em;
-  padding-bottom: 0.3em;
+  padding-bottom: 0.3%;
 }
 
 .noteimgbas {
-  padding-right: 0.3em;
+  padding-right: 0.3%;
+}
+
+.titre--enchantee {
+  color: #3c1218;
+}
+.titre--chic {
+  background: linear-gradient(to right, #c77412, #905bfd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.titre--delice {
+  background: linear-gradient(to right, #0431df, #0887fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.titre--palette {
+  background: linear-gradient(to right, #3d9339, #bfff7e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .containerint {
@@ -328,10 +347,19 @@ img {
   background: white;
   padding-right: 1%;
   padding-left: 1%;
+  margin-top: -2%;
 }
 
+.trait {
+  white-space: nowrap;
+  height: auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background: red;
+}
 .trait:hover {
-  animation: anim 2s normal ease-in-out forwards;
+  animation: anim 1s normal ease-in-out forwards;
   border-bottom: 1px solid black;
 }
 
