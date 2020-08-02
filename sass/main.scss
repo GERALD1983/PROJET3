@@ -61,14 +61,12 @@ $colour-secondary: #fdcb46;
   box-shadow: 4px 2px 5px 4px #ededed;
   height: 32em;
   width: 24em;
-  background: grey;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 @mixin fondmenu {
-  background: white;
   height: 100%;
   width: 95%;
   display: flex;
@@ -93,13 +91,11 @@ $colour-secondary: #fdcb46;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: orange;
   height: 85%;
   width: 80%;
   box-shadow: 4px 2px 5px 4px #ededed;
 }
 @mixin pagemenutitre {
-  background: red;
   height: 6%;
   width: 80%;
   margin-top: -1.5em;
@@ -182,6 +178,10 @@ footer {
 }
 .M1 {
   color: #3c1218;
+  font-family: "Kalam", cursive;
+  font-weight: bold;
+  font-style: inherit;
+  font-size: 1.2em;
 }
 .menu2 {
   @include fondmenu1234;
@@ -189,6 +189,9 @@ footer {
 }
 .M2 {
   color: #c77412;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 1.4em;
 }
 .menu3 {
   @include fondmenu1234;
@@ -196,6 +199,8 @@ footer {
 }
 .M3 {
   color: #0887fb;
+  font-family: "Kalam", cursive;
+  font-size: 1.5em;
 }
 .menu4 {
   @include fondmenu1234;
@@ -203,6 +208,8 @@ footer {
 }
 .M4 {
   color: #72bf56;
+  font-family: "Kalam", cursive;
+  font-size: 1.5em;
 }
 i {
   background: linear-gradient(to right, #f04a5e, #f78f6a);
@@ -243,6 +250,7 @@ i {
     background: linear-gradient(to right, #c77412, #905bfd);
     @include degradewebkit;
     font-family: "Croissant One", cursive;
+    font-size: 0.8em;
   }
   &--3 {
     background: linear-gradient(to right, #0431df, #0887fb);
@@ -309,18 +317,23 @@ i {
   justify-content: space-evenly;
   height: 95%;
   width: 90%;
-  background: grey;
-  &--1 {
+}
+.menunote {
+  &--note {
     font-family: "Kalam", cursive;
+    background: #fcdfdb;
   }
-  &--2 {
+  &--chic {
     font-family: "Crimson Text", serif;
+    background: #fff5fe;
   }
-  &--3 {
+  &--delice {
     font-family: "Kalam", cursive;
+    background: #edefef;
   }
-  &--4 {
+  &--palette {
     font-family: "Kalam", cursive;
+    background: #fdfffd;
   }
 }
 .menutitre {
@@ -339,14 +352,12 @@ i {
   justify-content: space-between;
 
   &--plat {
-    background: white;
     display: flex;
     flex-direction: column;
     padding-left: 8%;
     width: 75%;
   }
   &--prix {
-    background: white;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -358,14 +369,12 @@ i {
   width: 95%;
 }
 img {
-  background: white;
   width: 17em;
   height: 3em;
 }
 .box {
   display: flex;
   align-items: center;
-  background: white;
   padding-right: 1%;
   padding-left: 1%;
   margin-top: -1%;
@@ -414,4 +423,69 @@ img {
   text-align: center;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+/*mobile et tablette*/
+@media screen and (max-width: 1030px) {
+  body {
+    border: none;
+    width: 100%;
+    height: auto;
+  }
+  .foot {
+    width: 100%;
+    padding: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .container {
+    height: 2500px;
+  }
+  .menu {
+    flex-direction: column;
+    border-bottom: none;
+  }
+  .btn {
+    width: auto;
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 840px) {
+  .titremenu--contenumenu {
+    font-size: 1.3em;
+  }
+  .menuP--plat {
+    padding-left: 0;
+  }
+  .menuP--prix {
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .containerint {
+    width: 100%;
+  }
+  .titremenu--contenumenu {
+    font-size: 1em;
+  }
+  .menunote--1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .foot {
+    font-size: 1em;
+  }
+  .menu1,
+  .menu2,
+  .menu3,
+  .menu4 {
+    height: 26em;
+    width: 18em;
+  }
+  .note--2 {
+    font-size: 0.7em;
+  }
 }
