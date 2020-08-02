@@ -109,7 +109,6 @@ footer {
 
 /*page acceuil*/
 .menu {
-  background: white;
   height: 100%;
   width: 95%;
   display: flex;
@@ -123,7 +122,6 @@ footer {
   box-shadow: 4px 2px 5px 4px #ededed;
   height: 32em;
   width: 24em;
-  background: grey;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -133,13 +131,16 @@ footer {
 
 .M1 {
   color: #3c1218;
+  font-family: "Kalam", cursive;
+  font-weight: bold;
+  font-style: inherit;
+  font-size: 1.2em;
 }
 
 .menu2 {
   box-shadow: 4px 2px 5px 4px #ededed;
   height: 32em;
   width: 24em;
-  background: grey;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -149,13 +150,15 @@ footer {
 
 .M2 {
   color: #c77412;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 1.4em;
 }
 
 .menu3 {
   box-shadow: 4px 2px 5px 4px #ededed;
   height: 32em;
   width: 24em;
-  background: grey;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -165,13 +168,14 @@ footer {
 
 .M3 {
   color: #0887fb;
+  font-family: "Kalam", cursive;
+  font-size: 1.5em;
 }
 
 .menu4 {
   box-shadow: 4px 2px 5px 4px #ededed;
   height: 32em;
   width: 24em;
-  background: grey;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -181,6 +185,8 @@ footer {
 
 .M4 {
   color: #72bf56;
+  font-family: "Kalam", cursive;
+  font-size: 1.5em;
 }
 
 i {
@@ -235,6 +241,7 @@ i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Croissant One", cursive;
+  font-size: 0.8em;
 }
 .note--3 {
   background: linear-gradient(to right, #0431df, #0887fb);
@@ -307,23 +314,26 @@ i {
   justify-content: space-evenly;
   height: 95%;
   width: 90%;
-  background: grey;
 }
-.containerint--1 {
+
+.menunote--note {
   font-family: "Kalam", cursive;
+  background: #fcdfdb;
 }
-.containerint--2 {
+.menunote--chic {
   font-family: "Crimson Text", serif;
+  background: #fff5fe;
 }
-.containerint--3 {
+.menunote--delice {
   font-family: "Kalam", cursive;
+  background: #edefef;
 }
-.containerint--4 {
+.menunote--palette {
   font-family: "Kalam", cursive;
+  background: #fdfffd;
 }
 
 .menutitre {
-  background: red;
   height: 6%;
   width: 80%;
   margin-top: -1.5em;
@@ -338,7 +348,6 @@ i {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: orange;
   height: 85%;
   width: 80%;
   box-shadow: 4px 2px 5px 4px #ededed;
@@ -353,14 +362,12 @@ i {
   justify-content: space-between;
 }
 .menuP--plat {
-  background: white;
   display: flex;
   flex-direction: column;
   padding-left: 8%;
   width: 75%;
 }
 .menuP--prix {
-  background: white;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -373,7 +380,6 @@ i {
 }
 
 img {
-  background: white;
   width: 17em;
   height: 3em;
 }
@@ -381,7 +387,6 @@ img {
 .box {
   display: flex;
   align-items: center;
-  background: white;
   padding-right: 1%;
   padding-left: 1%;
   margin-top: -1%;
@@ -428,6 +433,82 @@ img {
   text-align: center;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+/*mobile et tablette*/
+@media screen and (max-width: 1030px) {
+  body {
+    border: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .foot {
+    width: 100%;
+    padding: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .container {
+    height: 2500px;
+  }
+
+  .menu {
+    flex-direction: column;
+    border-bottom: none;
+  }
+
+  .btn {
+    width: auto;
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 840px) {
+  .titremenu--contenumenu {
+    font-size: 1.3em;
+  }
+
+  .menuP--plat {
+    padding-left: 0;
+  }
+
+  .menuP--prix {
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .containerint {
+    width: 100%;
+  }
+
+  .titremenu--contenumenu {
+    font-size: 1em;
+  }
+
+  .menunote--1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .foot {
+    font-size: 1em;
+  }
+
+  .menu1,
+.menu2,
+.menu3,
+.menu4 {
+    height: 26em;
+    width: 18em;
+  }
+
+  .note--2 {
+    font-size: 0.7em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
