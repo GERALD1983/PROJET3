@@ -1,6 +1,14 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Devonshire&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Devonshire&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
+
 $colour-primary: #579c87;
 $colour-secondary: #fdcb46;
 
@@ -88,6 +96,7 @@ $colour-secondary: #fdcb46;
   background: orange;
   height: 85%;
   width: 80%;
+  box-shadow: 4px 2px 5px 4px #ededed;
 }
 @mixin pagemenutitre {
   background: red;
@@ -97,6 +106,7 @@ $colour-secondary: #fdcb46;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Montserrat", sans-serif;
 }
 html {
   display: flex;
@@ -118,8 +128,13 @@ body {
 a {
   text-decoration: none;
 }
+header a {
+  font-weight: bold;
+}
 header a,
-footer a {
+footer a,
+.btn {
+  font-family: "Montserrat", sans-serif;
   color: $colour-secondary;
 }
 footer {
@@ -131,7 +146,7 @@ footer {
   height: 85px;
   background: $colour-primary;
   color: $colour-secondary;
-  font-size: 2.5em;
+  font-size: 2em;
   position: fixed;
   bottom: 0;
   width: 76%;
@@ -222,18 +237,22 @@ i {
 .note {
   &--1 {
     color: #3c1218;
+    font-family: "Devonshire", cursive;
   }
   &--2 {
     background: linear-gradient(to right, #c77412, #905bfd);
     @include degradewebkit;
+    font-family: "Croissant One", cursive;
   }
   &--3 {
     background: linear-gradient(to right, #0431df, #0887fb);
     @include degradewebkit;
+    font-family: "Dancing Script", cursive;
   }
   &--4 {
     background: linear-gradient(to right, #3d9339, #bfff7e);
     @include degradewebkit;
+    font-family: "Kaushan Script", cursive;
   }
 }
 
@@ -256,7 +275,6 @@ i {
 /*page des menus*/
 .noteimghaut {
   font-size: 2em;
-  padding-bottom: 0.3%;
 }
 .noteimgbas {
   padding-right: 0.3%;
@@ -264,18 +282,25 @@ i {
 .titre {
   &--enchantee {
     color: #3c1218;
+    font-family: "Devonshire", cursive;
+  }
+  &--enchantee2 {
+    font-family: "Devonshire", cursive;
   }
   &--chic {
     background: linear-gradient(to right, #c77412, #905bfd);
     @include degradewebkit;
+    font-family: "Croissant One", cursive;
   }
   &--delice {
     background: linear-gradient(to right, #0431df, #0887fb);
     @include degradewebkit;
+    font-family: "Dancing Script", cursive;
   }
   &--palette {
     background: linear-gradient(to right, #3d9339, #bfff7e);
     @include degradewebkit;
+    font-family: "Kaushan Script", cursive;
   }
 }
 .containerint {
@@ -285,6 +310,18 @@ i {
   height: 95%;
   width: 90%;
   background: grey;
+  &--1 {
+    font-family: "Kalam", cursive;
+  }
+  &--2 {
+    font-family: "Crimson Text", serif;
+  }
+  &--3 {
+    font-family: "Kalam", cursive;
+  }
+  &--4 {
+    font-family: "Kalam", cursive;
+  }
 }
 .menutitre {
   @include pagemenutitre;
@@ -331,7 +368,7 @@ img {
   background: white;
   padding-right: 1%;
   padding-left: 1%;
-  margin-top: -2%;
+  margin-top: -1%;
 }
 .trait {
   white-space: nowrap;
@@ -339,7 +376,7 @@ img {
   display: flex;
   width: 100%;
   align-items: center;
-  background: red;
+
   &:hover {
     animation: anim 1s normal ease-in-out forwards;
     border-bottom: 1px solid black;
@@ -352,6 +389,22 @@ img {
   100% {
     width: 100%;
   }
+}
+/*page menu2*/
+
+.menu2 {
+  &--partie1 {
+    color: #c67412;
+  }
+  &--partie2 {
+    color: #a56799;
+  }
+  &--partie3 {
+    color: #6e4ccc;
+  }
+}
+.gras {
+  font-weight: bold;
 }
 
 /*mentions legales*/
