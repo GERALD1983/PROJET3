@@ -1,3 +1,5 @@
+/*polices couleur keyframes et mixins*/
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Devonshire&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Devonshire&display=swap");
@@ -101,6 +103,9 @@ $colour-secondary: #fdcb46;
   align-items: center;
   font-family: "Montserrat", sans-serif;
 }
+
+/*corps de page*/
+
 html {
   display: flex;
   justify-content: center;
@@ -278,6 +283,7 @@ i {
 }
 
 /*page des menus*/
+
 .noteimghaut {
   font-size: 2em;
 }
@@ -377,6 +383,7 @@ img {
   margin-top: -1%;
 }
 .trait {
+  border: 1px solid transparent;
   white-space: nowrap;
   height: auto;
   display: flex;
