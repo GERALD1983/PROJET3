@@ -297,6 +297,7 @@ i {
   }
   &--enchantee2 {
     font-family: "Devonshire", cursive;
+    margin-left: 0.2em;
   }
   &--chic {
     background: linear-gradient(to right, #c77412, #905bfd);
@@ -389,20 +390,21 @@ img {
   display: flex;
   width: 100%;
   align-items: center;
-
   &:hover {
-    animation: anim 1s normal ease-in-out forwards;
-    border-bottom: 1px solid black;
+    animation: anim 1s 0.1s normal ease-in-out forwards;
   }
 }
 @keyframes anim {
   0% {
     width: 0;
+    border-bottom: 1px solid black;
   }
   100% {
     width: 100%;
+    border-bottom: 1px solid black;
   }
 }
+
 /*page menu2*/
 
 .menu2 {
@@ -497,6 +499,17 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  img {
+    width: 14em;
+    height: 3em;
+  }
+  .img-bas-biencommencer {
+    margin-left: 1.3em;
+  }
+  .img-bas-biencontinuer {
+    width: 13.5em;
+    height: 2.9em;
   }
   .foot {
     font-size: 1em;
