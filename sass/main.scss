@@ -219,6 +219,7 @@ i {
   font-size: 1.5em;
 }
 .titremenu {
+  transition: 0.5s ease-in-out;
   &--icon {
     @include titremenu;
   }
@@ -240,7 +241,6 @@ i {
   &:hover {
     transform: scale(1.3);
     opacity: 0.6;
-    transition: 0.5s ease-in-out;
   }
 }
 .note {
