@@ -198,6 +198,9 @@ i {
   font-size: 1.5em;
 }
 
+.titremenu {
+  transition: 0.5s ease-in-out;
+}
 .titremenu--icon {
   font-size: 1.7em;
   display: flex;
@@ -231,7 +234,6 @@ i {
 .titremenu:hover {
   transform: scale(1.3);
   opacity: 0.6;
-  transition: 0.5s ease-in-out;
 }
 
 .note--1 {
